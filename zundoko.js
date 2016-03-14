@@ -14,7 +14,7 @@ class Zundoko {
             this.zundoko_list.push(sound);
 
             this.check();
-        }, 625);
+        }, 10);
     }
 
     check() {
