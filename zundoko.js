@@ -8,8 +8,9 @@ class Zundoko {
     }
 
     start() {
+        var i = 0;
         this.loop = setInterval(() => {
-            const sound = ['ズン', ' ', 'ドコ'][Math.floor(Math.random()*3)];
+            const sound = ['ズン', ' ', 'ズン', 'ズン', 'ズン', 'ドコ'][i++];
             console.log(sound);
             this.zundoko_list.push(sound);
 
