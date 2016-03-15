@@ -11,7 +11,7 @@ class Zundoko {
         this.loop = setInterval(() => {
             const sound = ['ズン', ' ', 'ドコ'][Math.floor(Math.random()*3)];
             console.log(sound);
-	    this.say(sound);
+            this.say(sound);
             this.zundoko_list.push(sound);
 
             this.check();
@@ -34,13 +34,13 @@ class Zundoko {
     finishLoop(list, i) {
         setTimeout(() => {
             console.log(list[i]);
-	    this.say(list[i++]);
+        this.say(list[i++]);
             if(i < list.length) this.finishLoop(list, i);
         }, 300);
     }
 
     say(sound) {
-	say.speak(sound, 'Kyoko');
+        say.speak(sound, 'Kyoko');
     }
 }
 
