@@ -16,7 +16,7 @@ class Zundoko {
             this.zundoko_list.push(sound);
 
             this.check();
-        }, 625);
+        }, 550);
     }
 
     check() {
@@ -29,7 +29,7 @@ class Zundoko {
 
     finish() {
         clearInterval(this.loop);
-        setTimeout(()=>{this.finishLoop(['キ', 'ヨ', 'シ！'], 0);}, 250);
+        setTimeout(()=>{this.finishLoop(['キ', 'ヨ', 'シ！'], 0);}, 300);
     }
 
     finishLoop(list, i) {
@@ -37,7 +37,7 @@ class Zundoko {
             console.log(list[i]);
             this.say(list[i++]);
             if(i < list.length) this.finishLoop(list, i);
-        }, 300);
+        }, 250);
     }
 
     say(sound) {
