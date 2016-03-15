@@ -34,8 +34,8 @@ class Zundoko {
 
     finishLoop(list, i) {
         setTimeout(() => {
-            console.log(list[i++]);
-	    this.say(list[i]);
+            console.log(list[i]);
+	    this.say(list[i++]);
             if(i < list.length) this.finishLoop(list, i);
         }, 300);
     }
