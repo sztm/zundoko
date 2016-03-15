@@ -1,10 +1,10 @@
 'use strict';
 
+const say = require('say');
+
 class Zundoko {
     constructor() {
         this.zundoko_list = [];
-        this.phrase = 'ズン ズンズンズンドコ';
-        this.finish_phrase = ['キ', 'ヨ', 'シ！'];
     }
 
     start() {
@@ -12,6 +12,7 @@ class Zundoko {
         this.loop = setInterval(() => {
             const sound = ['ズン', ' ', 'ズン', 'ズン', 'ズン', 'ドコ'][i++];
             console.log(sound);
+            this.say(sound);
             this.zundoko_list.push(sound);
 
             this.check();
@@ -21,7 +22,7 @@ class Zundoko {
     check() {
         const length = this.zundoko_list.length;
         const last5 = this.zundoko_list.slice(length-6, length).join('');
-        if(last5 == this.phrase) {
+        if(last5 == 'ズン ズンズンズンドコ') {
             this.finish();
         }
     }
@@ -33,9 +34,14 @@ class Zundoko {
 
     finishLoop(list, i) {
         setTimeout(() => {
-            console.log(list[i++]);
+            console.log(list[i]);
+        this.say(list[i++]);
             if(i < list.length) this.finishLoop(list, i);
         }, 300);
+    }
+
+    say(sound) {
+        say.speak(sound, 'Kyoko');
     }
 }
 
