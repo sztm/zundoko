@@ -40,7 +40,7 @@ class Zundoko {
     }
 
     say(sound) {
-        say.speak(sound, 'Kyoko');
+        say.speak(sound, 'Kyoko', 0.75);
     }
 }
 
