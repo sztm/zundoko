@@ -3,7 +3,11 @@
 
 ### 使い方
 
-`$ node zundoko`
+```
+$ npm install
+
+$ node zundoko
+```
 
 ### ブランチ
 
