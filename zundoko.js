@@ -5,7 +5,6 @@ const say = require('say');
 class Zundoko {
     constructor() {
         this.zundoko_list = [];
-        this.finish_phrase = ['キ', 'ヨ', 'シ！'];
     }
 
     start() {
